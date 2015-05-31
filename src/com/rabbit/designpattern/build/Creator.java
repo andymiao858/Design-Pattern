@@ -4,29 +4,29 @@ import com.rabbit.designpattern.build.Product.*;
 
 public class Creator {
 	
-	public static abstract class ExportOperation{
+	public static abstract class ManuFactory{
 		
-		public void export(String data){
-			ExportFileApi api = factoryMethod();
-			api.export(data);
+		public void produce(String data){
+			ProduceApi api = factoryMethod();
+			api.produce(data);
 		};
 		
-		public abstract ExportFileApi factoryMethod();
+		public abstract ProduceApi factoryMethod();
 	}
 	
 	
-	public static class ExportDBOperation extends ExportOperation{
+	public static class BMWManuFactory extends ManuFactory{
 		@Override
-		public ExportFileApi factoryMethod() {
-			return new ExportDB();
+		public ProduceApi factoryMethod() {
+			return new ProduceBMW();
 		}
 	}
 	
 	
-	public static class ExportTxtOperation extends ExportOperation{
+	public static class ToyotaManuFactory extends ManuFactory{
 		@Override
-		public ExportFileApi factoryMethod() {
-			return new ExportTxt();
+		public ProduceApi factoryMethod() {
+			return new ProduceToyota();
 		}
 	}
 

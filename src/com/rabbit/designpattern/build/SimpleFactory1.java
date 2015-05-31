@@ -1,17 +1,17 @@
 package com.rabbit.designpattern.build;
 
-import com.rabbit.designpattern.build.Product.EXPORTTYPE;
-import com.rabbit.designpattern.build.Product.ExportDB;
-import com.rabbit.designpattern.build.Product.ExportFileApi;
-import com.rabbit.designpattern.build.Product.ExportTxt;
+import com.rabbit.designpattern.build.Product.CAR;
+import com.rabbit.designpattern.build.Product.ProduceBMW;
+import com.rabbit.designpattern.build.Product.ProduceApi;
+import com.rabbit.designpattern.build.Product.ProduceToyota;
 
 public class SimpleFactory1 {
 		
-	public static ExportFileApi createApi(EXPORTTYPE type){
-		if(type == EXPORTTYPE.DB){
-			return new ExportDB();
-		}else if(type == EXPORTTYPE.TXT){
-			return new ExportTxt();
+	public static ProduceApi createCar(CAR type){
+		if(type == CAR.BMW){
+			return new ProduceBMW();
+		}else if(type == CAR.TOYOTA){
+			return new ProduceToyota();
 		}else{
 			throw new IllegalArgumentException();
 		}
@@ -19,8 +19,8 @@ public class SimpleFactory1 {
 	}
 	
 	public static void main(String[] args){
-		ExportFileApi api = SimpleFactory1.createApi(EXPORTTYPE.DB);
-		api.export("Hello Rabbit");
+		ProduceApi api = SimpleFactory1.createCar(CAR.BMW);
+		api.produce("Hello Rabbit");
 	}
 	
 	

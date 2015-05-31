@@ -2,28 +2,28 @@ package com.rabbit.designpattern.build;
 
 
 public class Product {
-	public enum EXPORTTYPE {
-		DB, TXT
+	public enum CAR {
+		BMW, TOYOTA
 	}
 
-	public static interface ExportFileApi {
-		public boolean export(String data);
+	public static interface ProduceApi {
+		public boolean produce(String data);
 	}
 
-	public static class ExportDB implements ExportFileApi {
+	public static class ProduceBMW implements ProduceApi {
 
 		@Override
-		public boolean export(String data) {
-			System.out.println("export DB [" + data + "]");
+		public boolean produce(String data) {
+			System.out.println("produce BMW [" + data + "]");
 			return true;
 		}
 
 	}
 
-	public static class ExportTxt implements ExportFileApi {
+	public static class ProduceToyota implements ProduceApi {
 		@Override
-		public boolean export(String data) {
-			System.out.println("export Txt [" + data + "]");
+		public boolean produce(String data) {
+			System.out.println("produce TOYOTA [" + data + "]");
 			return false;
 		}
 	}
