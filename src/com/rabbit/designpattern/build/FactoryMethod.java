@@ -17,6 +17,7 @@ public class FactoryMethod {
 		ExportOperation txt = new ExportTxtOperation();
 		ExportFileApi api = txt.factoryMethod();
 		api.export("hello rabbit");
+		
 	}
 
 }
