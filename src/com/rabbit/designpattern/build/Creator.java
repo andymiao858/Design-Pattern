@@ -1,6 +1,8 @@
 package com.rabbit.designpattern.build;
 
-import com.rabbit.designpattern.build.Product.*;
+import com.rabbit.designpattern.build.Product.ProduceApi;
+import com.rabbit.designpattern.build.Product.ProduceBMW;
+import com.rabbit.designpattern.build.Product.ProduceToyota;
 
 public class Creator {
 	
@@ -29,5 +31,5 @@ public class Creator {
 			return new ProduceToyota();
 		}
 	}
-
+	
 }
