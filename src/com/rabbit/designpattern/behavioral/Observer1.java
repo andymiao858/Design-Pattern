@@ -70,7 +70,6 @@ public class Observer1 {
 	public static void main(String[] args) {
 
 		Reader reader1 = new Reader("刘德华");
-
 		Reader reader2 = new Reader("张学友");
 
 		Newspaper subject = new Newspaper();
