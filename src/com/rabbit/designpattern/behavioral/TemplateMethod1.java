@@ -12,7 +12,7 @@ public class TemplateMethod1 {
 		for(Integer i : list){
 			System.out.println(i);
 		}
-		SortTemplate<Integer> template = new Sort();
+		SortTemplate<Integer> template = new SortInteger();
 		template.sort(list);
 		System.out.println("=======================");
 		for(Integer i : list){
@@ -39,7 +39,7 @@ public class TemplateMethod1 {
 		public abstract boolean compare(T t1, T t2);
 	}
 	
-	public static class Sort extends SortTemplate<Integer>{
+	public static class SortInteger extends SortTemplate<Integer>{
 
 		@Override
 		public boolean compare(Integer t1, Integer t2) {
